@@ -1,5 +1,10 @@
 package com.guatejug.demo.model
 
-data class Speaker(val id: Long,
+import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
+
+@Table("app.speaker")
+data class Speaker(
+    @Id val id: Long,
     val name: String,
     val country: String)
